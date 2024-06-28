@@ -1,0 +1,27 @@
+
+#include<stdio.h>
+void error_msg(void);
+
+main()
+{
+	int a, b;
+
+	printf("data1 data2 ?");
+	scanf("%d%d", &a, &b);
+
+	if (b == 0)
+	{
+		error_msg();
+	}
+	else
+	{
+		printf("%d/%d=%d・・・%d\n", a, b, a / b, a % b);
+	}
+}
+
+//関数定義
+void error_msg(void)
+{
+	printf("０で割り算は出来ません\n");
+	return;
+}
